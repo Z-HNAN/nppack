@@ -7,6 +7,7 @@ import commander = require('commander')
 import Config = require('../config')
 
 import buildCommand = require('./build')
+import devCommand = require('./dev')
 
 try {
   // Version
@@ -17,6 +18,10 @@ try {
     .command(Config.COMMAND_BUILD)
     .action(buildCommand)
 
+  // Dev
+  commander
+    .command(Config.COMMAND_DEV)
+    .action(devCommand)
 
   // exec
   commander.parse(process.argv)

@@ -51,7 +51,9 @@ yarn add nppack
   "dist": "./public",
   "distPublicJs": "./public/js",
   "distPublicCss": "./public/css",
-  "distPublicImage": "./public/image"
+  "distPublicImage": "./public/image",
+
+  "port": 5500
 }
 ```
 

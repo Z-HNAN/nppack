@@ -139,8 +139,8 @@ const buildCommand = () => {
   const srcPath = path.join(Config.PATH, Config.src)
   const distPath = path.join(Config.PATH, Config.dist)
 
-  // 删除dist目录
-  removeDeep(distPath)
+  // // 删除dist目录
+  // removeDeep(distPath)
 
   // 获得所有src下的index文件
   const indexFiles = readFileList({ dir: srcPath, deep: true, filter: file => /(index\.html)/g.test(file) })
@@ -153,7 +153,7 @@ const buildCommand = () => {
     parseDependencies(indexFile, fileContent)
   })
 
-  // componentCache已经有了index文件组件内容，及其对应关系
+  // componentCache, cssCache, jsCache已经有了index文件组件内容，及其对应关系
 
   // 替换index.html文件经行填充
   indexFiles.forEach(indexFile => {
@@ -169,33 +169,6 @@ const buildCommand = () => {
   copyPublicDir()
 
   logger('构建成功')
-
-  
-
-  // const RootPath = path.join(Config.PATH, 'index.jsx')
-  // const outPath = path.join(Config.PATH, 'dist')
-  // // console.log(RootPath)
-
-  // const RootContent = fs.readFileSync(RootPath, 'UTF-8')
-  // console.log(RootContent)
-  
-  // // 获取导出名称
-  // const exportNameReg = /module.exports\s*=\s*(\w+)/g
-  // const exportNameResponse = exportNameReg.exec(RootContent)
-  // if (lodash.isNil(exportNameResponse)) {
-  //   console.log('找不到');
-  // }
-  // const [, exportName] = exportNameResponse as RegExpExecArray
-  // // console.log(exportName);
-
-  // // 获取内容项
-  // const exportContentReg = new RegExp(`${exportName}\\s*=\\s*\\(([\\s\\S]*)\\)`)
-  // const [, exportContent] = exportContentReg.exec(RootContent) as RegExpExecArray
-  // // console.log(exportContent)
-
-  // fs.writeFileSync(outPath, exportContent)
-  // // console.log(Root)
-  // // console.log('=============================');
 
 }
 

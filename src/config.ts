@@ -27,10 +27,13 @@ const config: {
   distPublicCss: string
   distPublicImage: string
 
+  // 服务器port
+  port: number
+  host: string
 
 
 } = {
-  VERSION: '1.0.0',
+  VERSION: '0.1.0',
   COMMAND_BUILD: 'build',
   COMMAND_DEV: 'dev',
   PATH: path.resolve('./'),
@@ -42,6 +45,8 @@ const config: {
   distPublicJs: './dist/js',
   distPublicCss: './dist/css',
   distPublicImage: './dist/image',
+  port: 5500,
+  host: '0.0.0.0'
 }
 
 
