@@ -53,7 +53,8 @@ yarn add nppack
   "distPublicCss": "./public/css",
   "distPublicImage": "./public/image",
 
-  "port": 5500
+  "port": 5500,
+  "host": "0.0.0.0"
 }
 ```
 
