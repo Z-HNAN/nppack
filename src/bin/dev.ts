@@ -90,24 +90,18 @@ const handleChangePublic = (fullPath: string): boolean => {
   if (fullPath.includes(path.join(Config.PATH, Config.srcPublicJs))) {
     const jsFiles = readFileList({ dir: path.join(Config.PATH, Config.srcPublicJs), deep: true })
     const jsDistPath = path.join(Config.PATH, Config.distPublicJs)
-    removeDeep(jsDistPath)
-    makeDirSync(jsDistPath)
     copyFiles(jsFiles, jsDistPath)
     return true
   } 
   if (fullPath.includes(path.join(Config.PATH, Config.srcPublicCss))) {
     const cssFiles = readFileList({ dir: path.join(Config.PATH, Config.srcPublicCss), deep: true })
     const cssDistPath = path.join(Config.PATH, Config.distPublicCss)
-    removeDeep(cssDistPath)
-    makeDirSync(cssDistPath)
     copyFiles(cssFiles, cssDistPath)
     return true
   }
   if (fullPath.includes(path.join(Config.PATH, Config.srcPublicImage))) {
     const imageFiles = readFileList({ dir: path.join(Config.PATH, Config.srcPublicImage), deep: true })
     const imageDistPath = path.join(Config.PATH, Config.distPublicImage)
-    removeDeep(imageDistPath)
-    makeDirSync(imageDistPath)
     copyFiles(imageFiles, imageDistPath)
     return true
   }
