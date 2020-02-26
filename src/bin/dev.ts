@@ -96,7 +96,7 @@ const handleChangePublic = (fullPath: string): boolean => {
     return true
   } 
   if (fullPath.includes(path.join(Config.PATH, Config.srcPublicCss))) {
-    const cssFiles = readFileList({ dir: path.join(Config.PATH, Config.srcPublicss), deep: true })
+    const cssFiles = readFileList({ dir: path.join(Config.PATH, Config.srcPublicCss), deep: true })
     const cssDistPath = path.join(Config.PATH, Config.distPublicCss)
     removeDeep(cssDistPath)
     makeDirSync(cssDistPath)
@@ -104,7 +104,7 @@ const handleChangePublic = (fullPath: string): boolean => {
     return true
   }
   if (fullPath.includes(path.join(Config.PATH, Config.srcPublicImage))) {
-    const imageFiles = readFileList({ dir: path.join(Config.PATH, Config.srcPubliImage), deep: true })
+    const imageFiles = readFileList({ dir: path.join(Config.PATH, Config.srcPublicImage), deep: true })
     const imageDistPath = path.join(Config.PATH, Config.distPublicImage)
     removeDeep(imageDistPath)
     makeDirSync(imageDistPath)

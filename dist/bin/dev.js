@@ -71,7 +71,7 @@ const handleChangePublic = (fullPath) => {
         return true;
     }
     if (fullPath.includes(path.join(Config.PATH, Config.srcPublicCss))) {
-        const cssFiles = utils_1.readFileList({ dir: path.join(Config.PATH, Config.srcPublicss), deep: true });
+        const cssFiles = utils_1.readFileList({ dir: path.join(Config.PATH, Config.srcPublicCss), deep: true });
         const cssDistPath = path.join(Config.PATH, Config.distPublicCss);
         utils_1.removeDeep(cssDistPath);
         utils_1.makeDirSync(cssDistPath);
@@ -79,7 +79,7 @@ const handleChangePublic = (fullPath) => {
         return true;
     }
     if (fullPath.includes(path.join(Config.PATH, Config.srcPublicImage))) {
-        const imageFiles = utils_1.readFileList({ dir: path.join(Config.PATH, Config.srcPubliImage), deep: true });
+        const imageFiles = utils_1.readFileList({ dir: path.join(Config.PATH, Config.srcPublicImage), deep: true });
         const imageDistPath = path.join(Config.PATH, Config.distPublicImage);
         utils_1.removeDeep(imageDistPath);
         utils_1.makeDirSync(imageDistPath);
