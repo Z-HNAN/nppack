@@ -1,0 +1,27 @@
+{
+  "name": "nppack",
+  "version": "0.1.0",
+  "description": "no paste pack for static html development",
+  "main": "index.js",
+  "bin": {
+    "nppack": "./dist/bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@types/inquirer": "^6.5.0",
+    "@types/node": "^13.7.4",
+    "commander": "^4.1.1",
+    "inquirer": "^7.0.4",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "typescript": "^3.8.2"
+  },
+  "devDependencies": {
+    "@umijs/fabric": "^2.0.3"
+  }
+}
