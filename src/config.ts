@@ -33,7 +33,7 @@ const config: {
 
 
 } = {
-  VERSION: '0.1.0',
+  VERSION: '0.1.1',
   COMMAND_BUILD: 'build',
   COMMAND_DEV: 'dev',
   PATH: path.resolve('./'),

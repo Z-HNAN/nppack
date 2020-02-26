@@ -221,6 +221,7 @@ const dev = () => {
 
   // // 初始化所有依赖项
   // init()
+  build()
 
   // 监控所有文件改变
   fs.watch(srcPath, {

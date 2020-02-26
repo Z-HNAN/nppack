@@ -7,6 +7,7 @@ const path = tslib_1.__importStar(require("path"));
 const fs = tslib_1.__importStar(require("fs"));
 const lodash_1 = require("lodash");
 const utils_1 = require("../utils");
+const build = require("./build");
 const liveServer = require("live-server");
 const Config = require('./init')();
 const srcPath = path.join(Config.PATH, Config.src);
@@ -177,6 +178,7 @@ const dev = () => {
     // removeDeep(distPath)
     // // 初始化所有依赖项
     // init()
+    build();
     // 监控所有文件改变
     fs.watch(srcPath, {
         recursive: true
