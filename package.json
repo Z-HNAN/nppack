@@ -9,8 +9,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["cli", "bootstrap"],
+  "author": "Z-HNAN",
+  "repository": "https://github.com/Z-HNAN/nppack",
   "license": "MIT",
   "dependencies": {
     "@types/inquirer": "^6.5.0",
