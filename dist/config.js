@@ -2,7 +2,7 @@
 const tslib_1 = require("tslib");
 const path = tslib_1.__importStar(require("path"));
 const config = {
-    VERSION: '0.1.1',
+    VERSION: '0.1.2',
     COMMAND_BUILD: 'build',
     COMMAND_DEV: 'dev',
     PATH: path.resolve('./'),
