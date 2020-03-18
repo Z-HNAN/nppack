@@ -80,6 +80,18 @@ const handleChangePublic = (fullPath) => {
         utils_1.copyFiles(imageFiles, imageDistPath);
         return true;
     }
+    if (fullPath.includes(path.join(Config.PATH, Config.srcPublicFonts))) {
+        const fontsFiles = utils_1.readFileList({ dir: path.join(Config.PATH, Config.srcPublicFonts), deep: true });
+        const fontsDistPath = path.join(Config.PATH, Config.distPublicFonts);
+        utils_1.copyFiles(fontsFiles, fontsDistPath);
+        return true;
+    }
+    if (fullPath.includes(path.join(Config.PATH, Config.srcPublicMedia))) {
+        const mediaFiles = utils_1.readFileList({ dir: path.join(Config.PATH, Config.srcPublicMedia), deep: true });
+        const mediaDistPath = path.join(Config.PATH, Config.distPublicMedia);
+        utils_1.copyFiles(mediaFiles, mediaDistPath);
+        return true;
+    }
     return false;
 };
 /**

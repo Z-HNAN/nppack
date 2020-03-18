@@ -10,10 +10,14 @@ const config = {
     srcPublicJs: './src/js',
     srcPublicCss: './src/css',
     srcPublicImage: './src/image',
+    srcPublicFonts: './src/fonts',
+    srcPublicMedia: './src/media',
     dist: './dist',
     distPublicJs: './dist/js',
     distPublicCss: './dist/css',
     distPublicImage: './dist/image',
+    distPublicFonts: './dist/fonts',
+    distPublicMedia: './dist/media',
     port: 5500,
     host: '0.0.0.0'
 };

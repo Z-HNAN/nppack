@@ -19,6 +19,8 @@ const config: {
   srcPublicJs: string
   srcPublicCss: string
   srcPublicImage: string
+  srcPublicFonts: string
+  srcPublicMedia: string
 
   // 输出环境
   dist: string
@@ -26,6 +28,8 @@ const config: {
   distPublicJs: string
   distPublicCss: string
   distPublicImage: string
+  distPublicFonts: string
+  distPublicMedia: string
 
   // 服务器port
   port: number
@@ -41,10 +45,14 @@ const config: {
   srcPublicJs: './src/js',
   srcPublicCss: './src/css',
   srcPublicImage: './src/image',
+  srcPublicFonts: './src/fonts',
+  srcPublicMedia: './src/media',
   dist: './dist',
   distPublicJs: './dist/js',
   distPublicCss: './dist/css',
   distPublicImage: './dist/image',
+  distPublicFonts: './dist/fonts',
+  distPublicMedia: './dist/media',
   port: 5500,
   host: '0.0.0.0'
 }

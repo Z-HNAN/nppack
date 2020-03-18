@@ -18,13 +18,21 @@ const copyPublicDir = () => {
     const cssDistPath = path.join(Config.PATH, Config.distPublicCss);
     const imgFiles = utils_1.readFileList({ dir: path.join(Config.PATH, Config.srcPublicImage), deep: true });
     const imgDistPath = path.join(Config.PATH, Config.distPublicImage);
+    const fontsFiles = utils_1.readFileList({ dir: path.join(Config.PATH, Config.srcPublicFonts), deep: true });
+    const fontsDistPath = path.join(Config.PATH, Config.distPublicFonts);
+    const mediaFiles = utils_1.readFileList({ dir: path.join(Config.PATH, Config.srcPublicMedia), deep: true });
+    const mediaDistPath = path.join(Config.PATH, Config.distPublicMedia);
     // 创建文件夹
     utils_1.makeDirSync(jsDistPath);
     utils_1.makeDirSync(cssDistPath);
     utils_1.makeDirSync(imgDistPath);
+    utils_1.makeDirSync(fontsDistPath);
+    utils_1.makeDirSync(mediaDistPath);
     utils_1.copyFiles(jsFiles, jsDistPath);
     utils_1.copyFiles(cssFiles, cssDistPath);
     utils_1.copyFiles(imgFiles, imgDistPath);
+    utils_1.copyFiles(fontsFiles, fontsDistPath);
+    utils_1.copyFiles(mediaFiles, mediaDistPath);
 };
 /**
  * 将index.html文件按照src的目录结构生成到dist中

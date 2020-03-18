@@ -32,15 +32,25 @@ const copyPublicDir = () => {
   const cssDistPath = path.join(Config.PATH, Config.distPublicCss)
   const imgFiles = readFileList({ dir: path.join(Config.PATH, Config.srcPublicImage), deep: true })
   const imgDistPath = path.join(Config.PATH, Config.distPublicImage)
+  const fontsFiles = readFileList({ dir: path.join(Config.PATH, Config.srcPublicFonts), deep: true })
+  const fontsDistPath = path.join(Config.PATH, Config.distPublicFonts)
+  const mediaFiles = readFileList({ dir: path.join(Config.PATH, Config.srcPublicMedia), deep: true })
+  const mediaDistPath = path.join(Config.PATH, Config.distPublicMedia)
 
   // 创建文件夹
   makeDirSync(jsDistPath)
   makeDirSync(cssDistPath)
   makeDirSync(imgDistPath)
+  makeDirSync(fontsDistPath)
+  makeDirSync(mediaDistPath)
+
 
   copyFiles(jsFiles, jsDistPath)
   copyFiles(cssFiles, cssDistPath)
   copyFiles(imgFiles, imgDistPath)
+  copyFiles(fontsFiles, fontsDistPath)
+  copyFiles(mediaFiles, mediaDistPath)
+
 }
 
 /**

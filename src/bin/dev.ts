@@ -105,6 +105,18 @@ const handleChangePublic = (fullPath: string): boolean => {
     copyFiles(imageFiles, imageDistPath)
     return true
   }
+  if (fullPath.includes(path.join(Config.PATH, Config.srcPublicFonts))) {
+    const fontsFiles = readFileList({ dir: path.join(Config.PATH, Config.srcPublicFonts), deep: true })
+    const fontsDistPath = path.join(Config.PATH, Config.distPublicFonts)
+    copyFiles(fontsFiles, fontsDistPath)
+    return true
+  }
+  if (fullPath.includes(path.join(Config.PATH, Config.srcPublicMedia))) {
+    const mediaFiles = readFileList({ dir: path.join(Config.PATH, Config.srcPublicMedia), deep: true })
+    const mediaDistPath = path.join(Config.PATH, Config.distPublicMedia)
+    copyFiles(mediaFiles, mediaDistPath)
+    return true
+  }
   return false
 }
 

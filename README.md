@@ -47,11 +47,15 @@ yarn add nppack
   "srcPublicJs": "./src/js",
   "srcPublicCss": "./src/css",
   "srcPublicImage": "./src/image",
+  "srcPublicFonts": "./src/fonts",
+  "srcPublicMedia": "./src/media",
 
   "dist": "./public",
   "distPublicJs": "./public/js",
   "distPublicCss": "./public/css",
   "distPublicImage": "./public/image",
+  "distPublicFonts": "./dist/fonts",
+  "distPublicMedia": "./dist/media",
 
   "port": 5500,
   "host": "0.0.0.0"
